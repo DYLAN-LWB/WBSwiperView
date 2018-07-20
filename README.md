@@ -1,34 +1,4 @@
 # WBSwiperView
 使用UICollectionView实现无限轮播图
 
-使用方法
-#import "ViewController.h"
-#import "WBSwiperView.h"
-
-@interface ViewController ()
-@property (nonatomic, strong) WBSwiperView *swiper;
-
-@end
-
-@implementation ViewController
-
-- (void)viewDidLoad {
-[super viewDidLoad];
-
-NSArray *imageUrls = @[@"https://apk.beisuapp.beisu100.com//uploads/navimg/origin/2018/06/20180619111332_57399.jpg",
-@"https://apk.beisuapp.beisu100.com//uploads/navimg/origin/2018/05/20180518085713_81160.jpg",
-@"https://apk.beisuapp.beisu100.com//uploads/navimg/origin/2018/05/20180517135659_54349.png",
-@"https://apk.beisuapp.beisu100.com//uploads/navimg/origin/2018/02/20180209140638_10447.png"];
-
-self.swiper = [[WBSwiperView alloc] initSwiperViewWithFrame:CGRectMake(0, 100, [UIScreen mainScreen].bounds.size.width, 200)];
-self.swiper.imageUrlArray = imageUrls;
-[self.view addSubview:self.swiper];
-
-
-self.swiper.viewPageClick = ^(NSInteger index) {
-NSLog(@"点击了第%ld个", index);
-};
-}
-
-
-@end
+![image](https://github.com/DYLAN-LWB/WBSwiperView/blob/master/demo.png)

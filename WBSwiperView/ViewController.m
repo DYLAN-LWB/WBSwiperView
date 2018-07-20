@@ -11,7 +11,6 @@
 
 @interface ViewController ()
 @property (nonatomic, strong) WBSwiperView *swiper;
-
 @end
 
 @implementation ViewController
@@ -30,9 +29,10 @@
     
 
     self.swiper.viewPageClick = ^(NSInteger index) {
-        NSLog(@"点击了第%ld个", index);
+        NSLog(@"点击了第%ld个", (long)index);
     };
 }
 
-
 @end
+
+
